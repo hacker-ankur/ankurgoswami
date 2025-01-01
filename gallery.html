@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - ANKUR GOSWAMI</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="page-wrapper gallery-page">
+        <div class="nav-wrapper">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Me</a></li>
+                    <li><a href="skills.html">Skills</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="gallery.html" class="active">Gallery</a></li>
+                    <li><a href="payment.html">Payment</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <main>
+            <section class="gallery">
+                <h2>My Gallery</h2>
+                <div class="folder" id="goswamiji">
+                    <h3>Goswamiji</h3>
+                    <div class="image-container" id="image-container-goswamiji"></div>
+                </div>
+                <div class="folder" id="web">
+                    <h3>Web Development Projects</h3>
+                    <div class="image-container" id="image-container-web"></div>
+                </div>
+                <div class="folder" id="app">
+                    <h3>App Development Screenshots</h3>
+                    <div class="image-container" id="image-container-app"></div>
+                </div>
+                <div class="folder" id="">
+                    <h3>Cyber Security Initiatives</h3>
+                    <div class="image-container" id="image-container-cyber"></div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 ANKUR GOSWAMI</p>
+        </footer>
+    </div>
+
+    <!-- Fixed Home Icon -->
+    <a href="index.html" class="home-icon" title="Go to Home">
+        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPjxwYXRoIGQ9Ik0zIDlsOS03IDkgN3YxMWEyIDIgMCAwIDEtMiAySDVhMiAyIDAgMCAxLTItMnoiPjwvcGF0aD48cG9seWxpbmUgcG9pbnRzPSI5IDIyIDkgMTIgMTUgMTIgMTUgMjIiPjwvcG9seWxpbmU+PC9zdmc+" alt="Home">
+    </a>
+
+    <script>
+// Function to load images from each folder
+function loadImages() {
+    const folders = ['goswamiji', 'web', 'app', 'cyber'];
+
+    folders.forEach(folder => {
+        fetch(`/api/images/${folder}`)
+            .then(response => response.json())
+            .then(images => {
+                const imageContainer = document.getElementById(`image-container-${folder}`);
+                images.forEach(image => {
+                    const img = document.createElement('img');
+                    img.src = `images/gallery/${folder}/${image}`;
+                    img.alt = `Image from ${folder}`;
+                    img.classList.add('gallery-image');
+                    imageContainer.appendChild(img);
+                });
+            })
+            .catch(error => console.error('Error loading images:', error));
+    });
+}
+// Call the function to load images
+loadImages();
+    </script>
+</body>
+</html>

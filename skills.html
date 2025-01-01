@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills - ANKUR GOSWAMI</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="page-wrapper skills-page">
+        <div class="nav-wrapper">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Me</a></li>
+                    <li><a href="skills.html" class="active">Skills</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="payment.html">Payment</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <main>
+            <section class="skills-section section-card">
+                <div class="section-header">
+                    <h1>My Skills</h1>
+                    <div class="underline"></div>
+                </div>
+
+                <div class="skills-container">
+                    <div class="skills-category">
+                        <h2>Technical Skills</h2>
+                        <div class="skills-grid">
+                            <div class="skill-card">
+                                <div class="skill-icon cyber"></div>
+                                <h3>Cyber Security</h3>
+                                <div class="skill-progress-bar">
+                                    <div class="progress" data-progress="90"></div>
+                                </div>
+                                <ul class="skill-details">
+                                    <li>Network Security</li>
+                                    <li>Penetration Testing</li>
+                                    <li>Security Auditing</li>
+                                    <li>Incident Response</li>
+                                </ul>
+                            </div>
+
+                            <div class="skill-card">
+                                <div class="skill-icon web"></div>
+                                <h3>Web Development</h3>
+                                <div class="skill-progress-bar">
+                                    <div class="progress" data-progress="85"></div>
+                                </div>
+                                <ul class="skill-details">
+                                    <li>HTML5 & CSS3</li>
+                                    <li>JavaScript</li>
+                                    <li>React.js</li>
+                                    <li>Node.js</li>
+                                </ul>
+                            </div>
+
+                            <div class="skill-card">
+                                <div class="skill-icon app"></div>
+                                <h3>App Development</h3>
+                                <div class="skill-progress-bar">
+                                    <div class="progress" data-progress="80"></div>
+                                </div>
+                                <ul class="skill-details">
+                                    <li>Android Development</li>
+                                    <li>iOS Development</li>
+                                    <li>Flutter</li>
+                                    <li>React Native</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skills-category">
+                        <h2>Professional Skills</h2>
+                        <div class="skills-grid">
+                            <div class="skill-card">
+                                <div class="skill-icon management"></div>
+                                <h3>Project Management</h3>
+                                <div class="skill-progress-bar">
+                                    <div class="progress" data-progress="85"></div>
+                                </div>
+                                <ul class="skill-details">
+                                    <li>Team Leadership</li>
+                                    <li>Agile Methodology</li>
+                                    <li>Risk Management</li>
+                                    <li>Resource Planning</li>
+                                </ul>
+                            </div>
+
+                            <div class="skill-card">
+                                <div class="skill-icon problem"></div>
+                                <h3>Problem Solving</h3>
+                                <div class="skill-progress-bar">
+                                    <div class="progress" data-progress="90"></div>
+                                </div>
+                                <ul class="skill-details">
+                                    <li>Analytical Thinking</li>
+                                    <li>Critical Analysis</li>
+                                    <li>Decision Making</li>
+                                    <li>Innovation</li>
+                                </ul>
+                            </div>
+
+                            <div class="skill-card">
+                                <div class="skill-icon communication"></div>
+                                <h3>Communication</h3>
+                                <div class="skill-progress-bar">
+                                    <div class="progress" data-progress="85"></div>
+                                </div>
+                                <ul class="skill-details">
+                                    <li>Technical Writing</li>
+                                    <li>Presentation</li>
+                                    <li>Team Collaboration</li>
+                                    <li>Client Relations</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 ANKUR GOSWAMI</p>
+        </footer>
+    </div>
+
+    <!-- Fixed Home Icon -->
+    <a href="index.html" class="home-icon" title="Go to Home">
+        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPjxwYXRoIGQ9Ik0zIDlsOS03IDkgN3YxMWEyIDIgMCAwIDEtMiAySDVhMiAyIDAgMCAxLTItMnoiPjwvcGF0aD48cG9seWxpbmUgcG9pbnRzPSI5IDIyIDkgMTIgMTUgMTIgMTUgMjIiPjwvcG9seWxpbmU+PC9zdmc+" alt="Home">
+    </a>
+
+    <script>
+        // Animate progress bars on scroll
+        function animateProgressBars() {
+            const progressBars = document.querySelectorAll('.progress');
+            progressBars.forEach(bar => {
+                const progress = bar.getAttribute('data-progress');
+                bar.style.width = progress + '%';
+            });
+        }
+
+        // Trigger animation when page loads
+        document.addEventListener('DOMContentLoaded', animateProgressBars);
+
+        // Trigger animation when scrolling to skills section
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateProgressBars();
+                }
+            });
+        });
+
+        const skillsSection = document.querySelector('.skills-section');
+        if (skillsSection) {
+            observer.observe(skillsSection);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+{
+  "name": "ankur-goswami",
+  "version": "1.0.0",
+  "description": "This is my personal portfolio website showcasing my professional journey, skills, and projects in the field of technology and cybersecurity. The website serves as a comprehensive platform to share my experience and connect with others in the tech community.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
