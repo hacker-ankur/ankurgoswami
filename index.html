@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Security Headers -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://checkout.razorpay.com 'unsafe-inline'; style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://checkout.razorpay.com;">
+    
+    <title>Home - Ankur Goswami</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Professional Website</h1>
+        <nav>
+            <ul>
+                <li><a href="about.html">About</a></li>
+                <li><a href="payment.html">Payment</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="profile">
+            <img src="images/profile.jpg" alt="Ankur Goswami" class="profile-image">
+            <h2>About Me</h2>
+            <p>I'm Ankur Goswami, a Cyber Security Expert & Web Developer.</p>
+        </section>
+        <section class="skills">
+            <h2>Research Interests</h2>
+            <ul>
+                <li>Cyber Security</li>
+                <li>Web Development</li>
+                <li>App Development</li>
+            </ul>
+        </section>
+        <section class="projects">
+            <h2>Projects & Publications</h2>
+            <ul>
+                <li><a href="#">Project 1</a></li>
+                <li><a href="#">Project 2</a></li>
+                <li><a href="#">Publication 1</a></li>
+            </ul>
+        </section>
+        <section class="contact">
+            <h2>Contact</h2>
+            <p>Email: <a href="mailto:ankurgiri322@gmail.com">ankurgiri322@gmail.com</a></p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Ankur Goswami. All rights reserved.</p>
+    </footer>
+    <script>
+        // Typing animation
+        const texts = ['Cyber Security', 'Web Development', 'App Development', 'Technology'];
+        let count = 0;
+        let index = 0;
+        let currentText = '';
+        let letter = '';
+
+        function type() {
+            if (count === texts.length) {
+                count = 0;
+            }
+            currentText = texts[count];
+            letter = currentText.slice(0, ++index);
+
+            document.querySelector('.typed-text').textContent = letter;
+            if (letter.length === currentText.length) {
+                setTimeout(() => {
+                    index = 0;
+                    count++;
+                }, 2000);
+            }
+            setTimeout(type, 150);
+        }
+
+        // Start typing animation when page loads
+        document.addEventListener('DOMContentLoaded', () => {
+            type();
+        });
+
+        // Smooth scroll for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
